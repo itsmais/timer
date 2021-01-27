@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+.container{
+    text-align: center;
+}
+
+*{
+    font-family: 'Inconsolata', monospace;
+}
