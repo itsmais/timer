@@ -1,4 +1,4 @@
-// document.getElementById("start").addEventListener("click", startTimer);
+document.getElementById("start").addEventListener("click", startTimer);
 
 let isTimeGoingOn = false;
 let minutes;
