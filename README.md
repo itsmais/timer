@@ -8,5 +8,5 @@
 
 ### Screen of the Website
 <p float="left">
-  <img src="screenshots/Capture.PNG" width="700" />
+  <img src="assets/img/Capture.PNG" width="700" />
 </p>
