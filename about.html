@@ -6,7 +6,7 @@
 	<meta name="viewport"
 		  content="width=device-width, initial-scale=1">
 
-	<title>Nap Timer</title>
+	<title>Nap Timer - About</title>
 	<link rel="stylesheet"
 		  href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 	<link rel="stylesheet"
@@ -33,6 +33,8 @@
 				type="audio/ogg">
 		Your browser does not support the audio element.
 	</audio>
+
+
 	<section class="hero is-success is-fullheight">
 		<div class="hero-head">
 			<header class="navbar">
@@ -52,13 +54,12 @@
 					</div>
 					<div id="navbarMenuHeroA"
 						 class="navbar-menu">
-
 						<div class="navbar-end">
-							<a class="navbar-item is-active">
+							<a class="navbar-item"
+							   href="index.html">
 								home
 							</a>
-							<a class="navbar-item"
-							   href="about.html">
+							<a class="navbar-item is-active">
 								about
 							</a>
 							<span class="navbar-item">
@@ -76,23 +77,23 @@
 				</div>
 			</header>
 		</div>
+
 		<!-- Hero content: will be in the middle -->
 		<div class="hero-body">
 			<div class="container has-text-centered">
-				<h1 class="title">
-					Power Nap Timer
-				</h1>
-				<p class="subtitle"
-				   id="subtitle">
-					click to start
+				<p class="about-text">
+					Music credits: <a target="_blank"
+					   href="https://www.bensound.com/royalty-free-music/track/clear-day"><u>bensound.com</u></a> <br>
+					CSS framework: <a target="_blank"
+					   href="http://bulma.io/"><u>bulma.io</u></a><br>
+					Favicon: <a target="_blank"
+					   href="http://favicon.io/"><u>favicon.io</u></a><br>
+					Font: Inconsolata from <a target="_blank"
+					   href="https://fonts.google.com/specimen/Inconsolata?preview.text_type=custom"><u>Google
+							Fonts</u></a><br>
+					For more minimalistic open source JavaScript projects, follow me on Twitter <a target="_blank"
+					   href="https://twitter.com/maiscodes"><u>@maiscode</u></a>
 				</p>
-				<h1 class="title"
-					id="countdown">
-					10:00
-				</h1>
-				<button onclick="startTimer()"
-						class="button is-success is-inverted"
-						id="start">Start</button>
 			</div>
 		</div>
 	</section>
