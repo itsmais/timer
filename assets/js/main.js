@@ -29,7 +29,7 @@ function start() {
   startBtn.innerHTML = "Restart";
   music.pause();
   clearInterval(interval);
-  myTime = 10;
+  myTime = 60*10-1;
   display = document.querySelector('#countdown');
   startTimer(myTime, display);
 };
