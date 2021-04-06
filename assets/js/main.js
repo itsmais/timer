@@ -1,39 +1,35 @@
-document.getElementById("start").addEventListener("click", startTimer);
+document.getElementById("start").addEventListener("click", start);
 let music = document.getElementById("alarmMusic");
+let startBtn = document.getElementById("start");
+let timer;
+let interval;
 
-let isTimeGoingOn = false;
-let minutes;
-let seconds;
+function startTimer(duration, display) {
+  clearInterval(interval);
+  timer = duration;
+  let minutes, seconds;
+  interval = setInterval(function () {
+    minutes = parseInt(timer / 60, 10)
+    seconds = parseInt(timer % 60, 10);
 
-function startTimer() {
-  if (!isTimeGoingOn) {
-    document.getElementById("start").innerHTML = "Restart";
-    music.pause();
-    minutes = 9;
-    seconds = 59;
-    isTimeGoingOn = true;
-    document.getElementById("subtitle").innerHTML = "";
-    setInterval(function () {
-      document.getElementById("countdown").innerHTML = addZeroBefore(minutes) + ":" +
-        addZeroBefore(seconds);
-      seconds--;
-      if (seconds < 0) {
-        seconds = 59;
-        minutes--;
-      }
-      if (minutes < 0) {
-        isTimeGoingOn = false;
-        document.getElementById("countdown").innerHTML = "WAKE UP";
-        // play alarm music
-        music.play();
-      }
-    }, 1000);
-  } else {
-    minutes = 10;
-    seconds = 0;
-  }
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      timer = duration;
+      music.play();
+      clearInterval(interval);
+    }
+  }, 1000);
 }
 
-function addZeroBefore(n) {
-  return (n < 10 ? '0' : '') + n;
-}
+function start() {
+  startBtn.innerHTML = "Restart";
+  music.pause();
+  clearInterval(interval);
+  myTime = 10;
+  display = document.querySelector('#countdown');
+  startTimer(myTime, display);
+};
